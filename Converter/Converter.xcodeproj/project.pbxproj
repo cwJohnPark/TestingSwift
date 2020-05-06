@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B67899D024636A62004DD17B /* ConverterWithFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67899CF24636A62004DD17B /* ConverterWithFoundation.swift */; };
+		B67899D324636AC7004DD17B /* ConverterWithFoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67899D224636AC7004DD17B /* ConverterWithFoundationTests.swift */; };
 		B6E0762E24621C2A00B18736 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0762D24621C2A00B18736 /* AppDelegate.swift */; };
 		B6E0763024621C2A00B18736 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0762F24621C2A00B18736 /* SceneDelegate.swift */; };
 		B6E0763224621C2A00B18736 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0763124621C2A00B18736 /* ViewController.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B67899CF24636A62004DD17B /* ConverterWithFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterWithFoundation.swift; sourceTree = "<group>"; };
+		B67899D224636AC7004DD17B /* ConverterWithFoundationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterWithFoundationTests.swift; sourceTree = "<group>"; };
 		B6E0762A24621C2A00B18736 /* Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Converter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E0762D24621C2A00B18736 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6E0762F24621C2A00B18736 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 				B6E0763824621C2D00B18736 /* LaunchScreen.storyboard */,
 				B6E0763B24621C2D00B18736 /* Info.plist */,
 				B6E0764124621C4900B18736 /* Converter.swift */,
+				B67899CF24636A62004DD17B /* ConverterWithFoundation.swift */,
 			);
 			path = Converter;
 			sourceTree = "<group>";
@@ -98,6 +103,7 @@
 			children = (
 				B6E0764C24621CFD00B18736 /* ConverterTests.swift */,
 				B6E0764E24621CFD00B18736 /* Info.plist */,
+				B67899D224636AC7004DD17B /* ConverterWithFoundationTests.swift */,
 			);
 			path = ConverterTests;
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 				B6E0763224621C2A00B18736 /* ViewController.swift in Sources */,
 				B6E0762E24621C2A00B18736 /* AppDelegate.swift in Sources */,
 				B6E0764224621C4900B18736 /* Converter.swift in Sources */,
+				B67899D024636A62004DD17B /* ConverterWithFoundation.swift in Sources */,
 				B6E0763024621C2A00B18736 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6E0764D24621CFD00B18736 /* ConverterTests.swift in Sources */,
+				B67899D324636AC7004DD17B /* ConverterWithFoundationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

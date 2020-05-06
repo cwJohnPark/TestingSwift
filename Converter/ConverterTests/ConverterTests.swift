@@ -11,12 +11,32 @@ import XCTest
 
 class ConverterTests: XCTestCase {
     
+    var sut: Converter!
+    
     override func setUp() {
         // 특정 테스트가 실패할 경우 전체 테스트 진행 도중에 멈출 수 있다.
         continueAfterFailure = false
+        
+        // 테스트 메소드마다 공통적으로 사용할 인스턴스를 고정함
+        sut = Converter()
+    }
+    override func tearDown() {
+        sut = nil
     }
     
     
+    // setup() 을 이용하여 중복 코드 제거
+    func test32FahrenheitIsZeroCelsius_setup() {
+        // given
+        //let sut = Converter()
+        let input1 = 32.0
+        
+        // when
+        let output1 = sut.convertToCelsius(fahrenheit: input1)
+        
+        // then
+        XCTAssertEqual(output1, 0)
+    }
     
     // 테스트 케이스의 이름을 가독성있게 작성한다. - 1
     func test32FahrenheitIsZeroCelsius() {
