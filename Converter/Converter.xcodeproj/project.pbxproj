@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52D2C6762527DC5A004C4D74 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0764124621C4900B18736 /* Converter.swift */; };
 		B67899D024636A62004DD17B /* ConverterWithFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67899CF24636A62004DD17B /* ConverterWithFoundation.swift */; };
 		B67899D324636AC7004DD17B /* ConverterWithFoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67899D224636AC7004DD17B /* ConverterWithFoundationTests.swift */; };
 		B6E0762E24621C2A00B18736 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0762D24621C2A00B18736 /* AppDelegate.swift */; };
@@ -153,7 +154,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "John Park";
 				TargetAttributes = {
 					B6E0762924621C2A00B18736 = {
@@ -222,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6E0764D24621CFD00B18736 /* ConverterTests.swift in Sources */,
+				52D2C6762527DC5A004C4D74 /* Converter.swift in Sources */,
 				B67899D324636AC7004DD17B /* ConverterWithFoundationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +284,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -342,6 +345,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -375,7 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2U4T2B8QZW;
+				DEVELOPMENT_TEAM = QD8S4AT2PS;
 				INFOPLIST_FILE = Converter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -393,7 +397,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2U4T2B8QZW;
+				DEVELOPMENT_TEAM = QD8S4AT2PS;
 				INFOPLIST_FILE = Converter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
