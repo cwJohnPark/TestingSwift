@@ -1,13 +1,14 @@
 //
-//  ConverterTests.swift
-//  ConverterTests
+//  ConverterTest.swift
+//  UnitTestingStudyTests
 //
-//  Created by John Park on 2020/05/06.
+//  Created by Chang-Won Park on 2020/10/03.
 //  Copyright © 2020 John Park. All rights reserved.
 //
 
 import XCTest
-@testable import Converter
+
+@testable import UnitTestingStudy
 
 class ConverterTests: XCTestCase {
     

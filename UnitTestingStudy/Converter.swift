@@ -1,8 +1,8 @@
 //
 //  Converter.swift
-//  Converter
+//  UnitTestingStudy
 //
-//  Created by John Park on 2020/05/06.
+//  Created by Chang-Won Park on 2020/10/03.
 //  Copyright © 2020 John Park. All rights reserved.
 //
 
@@ -21,3 +21,10 @@ struct Converter {
     
 }
 
+struct ConverterWithFoundation {
+    func convertToCelsius(fahrenheit: Double) -> Double {
+        let fahrenheit = Measurement(value: fahrenheit, unit: UnitTemperature.fahrenheit)
+        let celsius = fahrenheit.converted(to: .celsius)
+        return celsius.value
+    }
+}
