@@ -10,7 +10,7 @@ import XCTest
 
 @testable import UnitTestingStudy
 
-enum GameError: Error {
+enum GameError: LocalizedError {
     case notPurchased
     case notInstalled
     case parentalControlsDisallowed
@@ -32,7 +32,42 @@ struct Game {
     }
 }
 
+extension LocalizedError {
+    var errorDescription: String? {
+        return "\(self)"
+    }
+}
+
 class ThrowingTests: XCTestCase {
+    
+    // MARK: - Throwing tests
+    
+    func testDeadStormRisingThrows() throws {
+        let game = Game(name: "Dead Storm Rising")
+        //try game.play() // Caught error: "parentalControlsDisallowed"
+    }
+    
+    // MARK: - Asserting on throws
+    
+    func testPlayingExplodingMonkeysDoesntThrow() {
+        let game = Game(name: "Exploding Monkeys")
+        XCTAssertNoThrow(try game.play())
+    }
+    
+    func testPlayingBlastazapThrows_typeCheck() {
+        let game = Game(name: "Blastazap")
+        
+        XCTAssertThrowsError(try game.play()) { (error) in
+            XCTAssertEqual(error as? GameError, GameError.notInstalled)
+        }
+    }
+    
+    func testPlayingBlastazapThrows() {
+        let game = Game(name: "Blastazap")
+        XCTAssertThrowsError(try game.play()) // It cannot test the type of error thrown
+    }
+    
+    // MARK: - Try-catch
     
     func testPlayingBioBlitzThrows_catch() {
         let game = Game(name: "BioBlitz")
@@ -50,9 +85,10 @@ class ThrowingTests: XCTestCase {
         let game = Game(name: "BioBlitz")
         do {
             try game.play()
-            XCTFail("BioBlitz has not been purchased")
+            XCTFail("BioBlitz has not been purchased") // it shouldn't be hit
         } catch {}
     }
 
 
 }
+

@@ -42,8 +42,10 @@ class CalculatorTests: XCTestCase {
         let result = divisionRemainder(of: dividend, dividedBy: divisor)
         
         // then
-        verifiyDivision_NoDirectives(result, expecetedQuotient: 3, expectedRemainder: 2)
-        verifiyDivision(result, expecetedQuotient: 3, expectedRemainder: 2)
+        //verifiyDivision_NoDirectives(result, expecetedQuotient: 3, expectedRemainder: 2)
+        verifiyDivision_NoDirectives(result, expecetedQuotient: 3, expectedRemainder: 1)
+        //verifiyDivision(result, expecetedQuotient: 3, expectedRemainder: 2)
+        verifiyDivision(result, expecetedQuotient: 3, expectedRemainder: 1)
     }
     
     // MARK: - Verification Method
