@@ -40,4 +40,29 @@ struct PrimeCalculator {
             completion(primes)
         }
     }
+    
+    /*
+     * It calls closure every time a prime number is found.
+     * It streams the result, rather than sending them all back at one.
+     */
+    static func calculateStreaming(upTo max: Int, completion: @escaping (Int) -> Void) {
+        DispatchQueue.global().async {
+            guard max > 1 else {
+                return
+            }
+            var sieve = [Bool](repeating: true, count: max)
+            sieve[0] = false
+            sieve[1] = false
+            
+            for number in 2 ..< max {
+                if sieve[number] == true {
+                    for multiple in stride(from: number * number, to: sieve.count, by: number) {
+                        sieve[multiple] = false
+                    }
+                    
+                    completion(number)
+                }
+            }
+        }
+    }
 }
