@@ -67,4 +67,22 @@ class AsynchronousTests: XCTestCase {
         
         wait(for: [expectation], timeout: 3)
     }
+    
+    func testPrimesUpTo100ShouldBe25_WatchProgress() {
+        // given
+        let maximumCount = 100
+        
+        // when
+        let progress = PrimeCalculator.calculateWithProgress(upTo: maximumCount) {
+            XCTAssertEqual($0.count, 25)
+        }
+        
+        // then
+        let predicate = NSPredicate(
+            format: "%@.completionUnitCount == %@", argumentArray: [progress, maximumCount]
+        )
+        
+        let expectation = XCTNSPredicateExpectation(predicate: predicate, object: progress)
+       // wait(for: [expectation], timeout: 100)
+    }
 }
